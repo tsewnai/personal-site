@@ -1,0 +1,76 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header>
+  <nav>
+    <a href="/" class="logo">IW</a>
+    <div class="nav-links">
+      {navItems.map(({ label, href }) => (
+        <a
+          href={href}
+          class:list={["nav-link", { active: currentPath === href || (href !== "/" && currentPath.startsWith(href)) }]}
+        >
+          {label}
+        </a>
+      ))}
+      <ThemeToggle />
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+  }
+
+  .logo:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  .nav-link:hover {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .nav-link.active {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+</style>

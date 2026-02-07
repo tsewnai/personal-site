@@ -1,0 +1,18 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsewnai/personal-site.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "astro": "^5.17.1"
+  }
+}

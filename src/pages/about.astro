@@ -1,0 +1,39 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="About — Ian West" description="About Ian West — developer, builder, tinkerer.">
+  <h1>About</h1>
+  <div class="prose">
+    <p>
+      Hey! I'm Ian — a software developer who likes building things and learning
+      in public.
+    </p>
+    <p>
+      This site is where I share what I'm working on, things I've learned, and
+      the occasional deep-dive into whatever has my attention.
+    </p>
+    <p>
+      Feel free to reach out — I'm always happy to chat about software, projects,
+      or ideas.
+    </p>
+  </div>
+</Base>
+
+<style>
+  h1 {
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose {
+    max-width: 32rem;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+</style>
