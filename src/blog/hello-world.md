@@ -5,7 +5,7 @@ pubDate: 2026-02-07
 tags: ["meta"]
 ---
 
-This is the first post on my new site. I built it with [Astro](https://astro.build) because I wanted something fast, simple, and trying out another new framework. I've also come to love writing in Markdown.
+This is the first post on my new site. I built it with [Astro](https://astro.build) because I wanted something fast, simple, and to try out another new framework. I've also come to love writing in Markdown.
 
 ## What I'll write about
 
