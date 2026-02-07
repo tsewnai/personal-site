@@ -2,7 +2,6 @@
 import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
-  { label: "Home", href: "/" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Resume", href: "/resume" },
@@ -14,7 +13,7 @@ const currentPath = Astro.url.pathname;
 
 <header>
   <nav>
-    <a href="/" class="logo">IW</a>
+    <a href="/" class="logo" aria-label="Ian West — Home">IW</a>
     <div class="nav-links">
       {navItems.map(({ label, href }) => (
         <a
