@@ -1,0 +1,209 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Resume — Ian West" description="Ian West's resume — software engineer based in Columbus, OH.">
+  <div class="resume-header">
+    <h1>Resume</h1>
+    <a href="/ian-west-resume.pdf" download class="download-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+      </svg>
+      Download PDF
+    </a>
+  </div>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <p class="skills">React, TypeScript, Node, C#, .NET MVC, MS SQL, CI/CD Pipelines, Azure Cloud Services, Bicep, Terraform, Vitest, Jest, Playwright, Java, Spring Boot, PostgreSQL, JavaScript, Vue.js</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <h3>Software Engineer</h3>
+          <span class="org">BBI Logistics, Columbus, OH</span>
+        </div>
+        <span class="date">Jan 2023 – Present</span>
+      </div>
+      <ul>
+        <li>Act as Product Owner of the BBI Transportation TMS application, collaborating with key stakeholders to define requirements and lead the development and implementation of new features.</li>
+        <li>As 1 of 4 developers, designed and implemented a full-stack TMS application for BBI Transportation, enabling streamlined logistics and contributing to $4M+ in annual revenue.</li>
+        <li>Implemented and integrated a .NET API enabling seamless QuickBooks integration, while developing a CI/CD pipeline to automate build, test, deployment, and rollback processes.</li>
+        <li>Pioneered frontend testing integration into existing application pipelines with Vitest and Playwright and created documentation shared across development teams.</li>
+        <li>Developed external customer-facing portals providing customers and carriers with real-time insights into freight status and deliveries.</li>
+        <li>Developed a real-time company stats dashboard using React, displayed across the office to provide employees with key performance metrics.</li>
+        <li>Mentor and provide direct guidance to interns and junior developers, fostering skill development and professional growth.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <h3>Mechanic</h3>
+          <span class="org">Paradise Garage, Columbus, OH</span>
+        </div>
+        <span class="date">Apr 2020 – Sep 2022</span>
+      </div>
+      <ul>
+        <li>Swiftly learned to repair and maintain bicycles starting without experience, using problem-solving, collaboration, and technical documentation. Promoted to full-time mechanic in less than 12 months.</li>
+        <li>Communicated effectively with customers to address issues and created repair plans, invoices, and scheduling with Lightspeed software.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <h3>Barista</h3>
+          <span class="org">Fox in the Snow, Columbus, OH</span>
+        </div>
+        <span class="date">Jul 2018 – Aug 2020</span>
+      </div>
+      <ul>
+        <li>Provided a distinguished atmosphere of hospitality to every guest at the highest-grossing cafe in the business.</li>
+        <li>Applied communication skills effectively with a team of 12+ to ensure a consistent, memorable experience for guests.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <h3>Lead Coffee Roaster</h3>
+          <span class="org">Mission Coffee Co, Columbus, OH</span>
+        </div>
+        <span class="date">Apr 2017 – Jul 2018</span>
+      </div>
+      <ul>
+        <li>Roasted specialty grade coffees of the highest quality, using roasting software Cropster combined with sense-based analog methods.</li>
+        <li>Transitioned rapidly from barista to lead coffee roaster within 12 months.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <h3>Tech Elevator</h3>
+          <span class="org">Columbus, OH</span>
+        </div>
+        <span class="date">Sep 2022 – Dec 2022</span>
+      </div>
+      <p class="edu-desc">14-week full-stack coding bootcamp — 800+ hours of development education and application using Java.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <h3>Columbus State Community College</h3>
+          <span class="org">Columbus, OH</span>
+        </div>
+        <span class="date">Aug 2018 – May 2018</span>
+      </div>
+      <p class="edu-desc">Earned credits toward a degree in Social Work and Human Services.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .resume-header h1 {
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .download-btn:hover {
+    background: var(--color-bg-alt);
+    text-decoration: none;
+    color: var(--color-accent);
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  section > h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .skills {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .entry {
+    margin-bottom: 1.5rem;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+  }
+
+  .entry-header h3 {
+    font-size: 1.05rem;
+  }
+
+  .org {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .date {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+  }
+
+  li {
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+  }
+
+  .edu-desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+</style>
