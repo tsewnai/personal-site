@@ -5,11 +5,7 @@ pubDate: 2026-02-07
 tags: ["meta"]
 ---
 
-This is the first post on my new site. I built it with [Astro](https://astro.build) because I wanted something fast, simple, and content-focused.
-
-## Why Astro?
-
-Most personal sites don't need a JavaScript framework shipping kilobytes of client-side code. Astro renders everything to static HTML by default, and only hydrates the interactive bits you explicitly opt into. That means near-instant page loads with zero wasted bytes.
+This is the first post on my new site. I built it with [Astro](https://astro.build) because I wanted something fast, simple, and content focused. I've also come to love writing in Markdown. 
 
 ## What I'll write about
 
