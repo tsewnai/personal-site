@@ -9,8 +9,6 @@ This is the first post on my new site. I built it with [Astro](https://astro.bui
 
 ## What I'll write about
 
-Expect posts about:
-
 - Things I'm building
 - Stuff I'm learning
 - The occasional deep dive into a tool or technique
