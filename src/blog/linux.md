@@ -1,3 +1,10 @@
+---
+title: "Switching to Linux"
+description: "How I learned to love the Penguin"
+pubDate: 2026-02-12
+tags: ["meta", "linux", "penguin"]
+---
+
 # Switching to Linux: How I learned to love the Penguin
 
 ## 2019: The First Attempt
