@@ -5,8 +5,6 @@ pubDate: 2026-02-12
 tags: ["meta", "linux", "penguin"]
 ---
 
-# Switching to Linux: How I learned to love the Penguin
-
 ## 2019: The First Attempt
 
 My first real foray into Linux was in 2019. In late 2019 I wanted to try out coding. The Odin Project and Harvard's CS50 course were my first guides into programming. I partitioned my laptop with Windows and Linux, that alone took hours, but felt like a massive achievement. I think I coded the classic hello world in Python, but for some reason failed to make the leap to recreating Google's homepage in HTML and CSS. Life happened and I closed the laptop.
