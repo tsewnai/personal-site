@@ -21,7 +21,7 @@ After three years of developing, I've learned that when I feel in over my head t
 
 ## Wednesday: Back to Work
 
-Wednesday was back to work as usual, but luckily enough moving tenants provided the ample opportunity to optimize our IaC and pipelines. Turns out being halfway decent in the terminal can make ripping through `terraform` and `az` commands a breeze. I would be remiss not to give a shout out to [Mitchell Hashimoto]("https://mitchellh.com/") for blessing me with both [Ghostty](https://ghostty.org/) and Terraform. 
+Wednesday was back to work as usual, but luckily enough moving tenants provided the ample opportunity to optimize our IaC and pipelines. Turns out being halfway decent in the terminal can make ripping through `terraform` and `az` commands a breeze. I would be remiss not to give a shout out to [Mitchell Hashimoto](https://mitchellh.com/) for blessing me with both [Ghostty](https://ghostty.org/) and Terraform. 
 
 ## Today: Getting Comfortable
 
