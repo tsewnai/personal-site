@@ -1,6 +1,6 @@
 import { defineAction } from "astro:actions";
 import { z } from "astro/zod";
-import { db } from "../db";
+import { getDb } from "../db";
 import { comments } from "../db/schema";
 
 export const server = {
@@ -12,7 +12,9 @@ export const server = {
       email: z.string().email("Invalid email, I won't spam you."),
       message: z.string().min(1, "Message is required."),
     }),
-    handler: async (input) => {
+    handler: async (input, context) => {
+      const { env } = context.locals.runtime;
+      const db = getDb(env);
       const [comment] = await db
         .insert(comments)
         .values(input)
