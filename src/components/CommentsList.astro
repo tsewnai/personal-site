@@ -1,5 +1,5 @@
 ---
-import { db } from "../db";
+import { getDb } from "../db";
 import { comments } from "../db/schema";
 import { eq, desc } from "drizzle-orm";
 
@@ -9,6 +9,7 @@ interface Props {
 
 const { postSlug } = Astro.props;
 
+const db = getDb();
 const postComments = await db
   .select()
   .from(comments)
