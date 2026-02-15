@@ -4,6 +4,12 @@ export const prerender = false;
 import Base from "../../layouts/Base.astro";
 import Comments from "../../components/Comments.astro";
 import { getEntry, render } from "astro:content";
+import { actions } from "astro:actions";
+
+const result = Astro.getActionResult(actions.addComment);
+if (result && !result.error) {
+  return Astro.redirect(`${Astro.url.pathname}#comments`);
+}
 
 const { slug } = Astro.params;
 const post = await getEntry("blog", slug!);

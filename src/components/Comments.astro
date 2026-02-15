@@ -9,7 +9,7 @@ interface Props {
 const { postSlug } = Astro.props;
 ---
 
-<section class="comments">
+<section id="comments" class="comments">
   <h2>Comments</h2>
   <CommentsList postSlug={postSlug} />
   <CommentsForm postSlug={postSlug} />
