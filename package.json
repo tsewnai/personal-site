@@ -13,6 +13,12 @@
   },
   "license": "ISC",
   "dependencies": {
-    "astro": "^5.17.1"
+    "@astrojs/cloudflare": "^12.6.12",
+    "@libsql/client": "^0.17.0",
+    "astro": "^5.17.1",
+    "drizzle-orm": "^0.45.1"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.9"
   }
 }
