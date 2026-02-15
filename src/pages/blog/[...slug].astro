@@ -1,15 +1,17 @@
 ---
-export const prerender = false;
-
 import Base from "../../layouts/Base.astro";
 import Comments from "../../components/Comments.astro";
-import { getEntry, render } from "astro:content";
+import { getCollection, render } from "astro:content";
 
-const { slug } = Astro.params;
-const post = await getEntry("blog", slug!);
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
 
-if (!post) return Astro.redirect("/blog");
-
+const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
@@ -29,7 +31,7 @@ const { Content } = await render(post);
       <Content />
     </div>
   </article>
-  <Comments postSlug={post.id} />
+  <Comments server:defer postSlug={post.id} />
 </Base>
 
 <style>
