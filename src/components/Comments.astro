@@ -1,7 +1,4 @@
 ---
-import CommentsList from "./CommentsList.astro";
-import CommentsForm from "./CommentsForm.astro";
-
 interface Props {
   postSlug: string;
 }
@@ -10,9 +7,8 @@ const { postSlug } = Astro.props;
 ---
 
 <section class="comments">
-  <h2>Comments</h2>
-  <CommentsList postSlug={postSlug} />
-  <CommentsForm postSlug={postSlug} />
+  <h2>Comments (debug)</h2>
+  <p>Slug: {postSlug}</p>
 </section>
 
 <style>
