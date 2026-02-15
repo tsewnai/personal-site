@@ -3,6 +3,5 @@ import cloudflare from "@astrojs/cloudflare";
 
 export default defineConfig({
   site: "https://ianwest.dev",
-  output: "hybrid",
   adapter: cloudflare(),
 });

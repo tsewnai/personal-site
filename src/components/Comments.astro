@@ -1,0 +1,29 @@
+---
+import CommentsList from "./CommentsList.astro";
+import CommentsForm from "./CommentsForm.astro";
+
+interface Props {
+  postSlug: string;
+}
+
+const { postSlug } = Astro.props;
+---
+
+<section class="comments">
+  <h2>Comments</h2>
+  <CommentsList postSlug={postSlug} />
+  <CommentsForm postSlug={postSlug} />
+</section>
+
+<style>
+  .comments {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+</style>
