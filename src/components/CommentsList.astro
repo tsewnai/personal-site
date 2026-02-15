@@ -21,7 +21,7 @@ const postComments = await db
     {postComments.map((comment) => (
       <li class="comment">
         <div class="comment-header">
-          <strong>{comment.name}</strong>
+          <strong class="comment-name">{comment.name}</strong>
           <time datetime={comment.createdAt.toISOString()}>
             {comment.createdAt.toLocaleDateString("en-US", {
               year: "numeric",
@@ -40,6 +40,8 @@ const postComments = await db
 
 <style>
   .comments-list {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1rem;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -50,6 +52,10 @@ const postComments = await db
     padding: 1rem;
     background: var(--color-bg-alt);
     border-radius: 8px;
+  }
+
+  .comment-name {
+    color: var(--color-accent)
   }
 
   .comment-header {

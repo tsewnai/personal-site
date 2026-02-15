@@ -8,7 +8,6 @@ interface Props {
 const { postSlug } = Astro.props;
 
 const result = Astro.getActionResult(actions.addComment);
-const success = result && !result.error;
 ---
 
 <form method="POST" action={actions.addComment}>
@@ -18,7 +17,7 @@ const success = result && !result.error;
     <input id="name" name="name" type="text" required />
   </div>
   <div class="field">
-    <label for="email">Email</label>
+    <label for="email">Email - Not Displayed</label>
     <input id="email" name="email" type="email" required />
   </div>
   <div class="field">
@@ -28,10 +27,7 @@ const success = result && !result.error;
   {result?.error && (
     <p class="error">Something went wrong. Please try again.</p>
   )}
-  {success && (
-    <p class="success">Comment posted!</p>
-  )}
-  <button type="submit">Post Comment</button>
+  <button type="submit">Add Comment</button>
 </form>
 
 <style>
@@ -63,6 +59,10 @@ const success = result && !result.error;
     font-size: 0.95rem;
   }
 
+  input {
+    width:fit-content
+  }
+
   input:focus,
   textarea:focus {
     outline: 2px solid var(--color-accent);
@@ -89,12 +89,8 @@ const success = result && !result.error;
   }
 
   .error {
-    color: #ef4444;
+    color: tomato;
     font-size: 0.9rem;
   }
 
-  .success {
-    color: #22c55e;
-    font-size: 0.9rem;
-  }
 </style>

@@ -5,6 +5,7 @@ import { comments } from "../db/schema";
 
 export const server = {
   addComment: defineAction({
+    accept: "form",
     input: z.object({
       postSlug: z.string(),
       name: z.string().min(1, "Name is required."),
