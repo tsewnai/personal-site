@@ -102,6 +102,10 @@ img {
   top: 0.5rem;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(6px); }
 }
@@ -116,6 +120,11 @@ img {
 
 ::view-transition-new(root) {
   animation: fade-in 0.2s ease-out forwards;
+}
+
+::view-transition-old(site-header),
+::view-transition-new(site-header) {
+  animation: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
