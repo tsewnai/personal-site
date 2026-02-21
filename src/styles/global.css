@@ -102,6 +102,29 @@ img {
   top: 0.5rem;
 }
 
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; transform: translateY(-6px); }
+}
+
+::view-transition-old(root) {
+  animation: fade-out 0.15s ease-in forwards;
+}
+
+::view-transition-new(root) {
+  animation: fade-in 0.2s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
