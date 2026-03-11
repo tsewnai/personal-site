@@ -1,7 +1,7 @@
 ---
 title: "Vim-Curious"
 description: "The Wizard is just a bunch of Bash functions and Lua scripts"
-pubDate: 2026-03-12
+pubDate: 2026-03-11
 tags: ["vim", "neovim", "linux", "tools"]
 ---
 
