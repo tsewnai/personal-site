@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 ---
 
-<Base title="Resume — Ian West" description="Ian West's resume — software engineer based in Columbus, OH.">
+<Base title="Resume — Ian West" description="Ian West's resume — full-stack .NET and React engineer based in Columbus, OH.">
   <div class="resume-header">
     <h1>Resume</h1>
     <a href="/ian-west-resume.pdf" download class="download-btn">
@@ -15,9 +15,24 @@ import Base from "../layouts/Base.astro";
     </a>
   </div>
 
+  <p class="summary">Full-stack software engineer specializing in .NET and React, with deep experience taking a single-tenant application to a multi-tenant SaaS platform on Azure. Owns features from infrastructure and API to data model and UI, and builds the integrations that connect a product to the outside world. Diplomatic, personable, and driven to solve human problems.</p>
+
   <section>
     <h2>Technical Skills</h2>
-    <p class="skills">React, TypeScript, Node, C#, .NET MVC, MS SQL, CI/CD Pipelines, Azure Cloud Services, Bicep, Terraform, Vitest, Jest, Playwright, Java, Spring Boot, PostgreSQL, JavaScript, Vue.js</p>
+    <dl class="skills">
+      <dt>Languages</dt>
+      <dd>C#, TypeScript, JavaScript, SQL (T-SQL), Java, Python, Bash</dd>
+      <dt>Backend</dt>
+      <dd>.NET 10, ASP.NET Core, .NET Aspire, EF Core, REST APIs, clean/onion architecture, Spring Boot</dd>
+      <dt>Frontend</dt>
+      <dd>React, Redux Toolkit / RTK Query, React Hook Form, Vite, Tailwind CSS, Node</dd>
+      <dt>Data</dt>
+      <dd>MS SQL Server, PostgreSQL, Redis, EF Core migrations, query optimization and SQL projections</dd>
+      <dt>Cloud &amp; DevOps</dt>
+      <dd>Azure (Container Apps, App Service, SQL, Key Vault, Front Door, Entra ID, App Insights), Terraform, Bicep, Docker, GitHub Actions, CI/CD, per-PR preview deployments, blue/green deploys</dd>
+      <dt>Testing</dt>
+      <dd>Vitest, Playwright, xUnit, Jest, unit and integration testing</dd>
+    </dl>
   </section>
 
   <section>
@@ -26,20 +41,41 @@ import Base from "../layouts/Base.astro";
     <div class="entry">
       <div class="entry-header">
         <div>
-          <h3>Software Engineer</h3>
-          <span class="org">BBI Logistics, Columbus, OH</span>
+          <h3>BBI Logistics</h3>
+          <span class="org">Columbus, OH</span>
         </div>
         <span class="date">Jan 2023 – Present</span>
       </div>
-      <ul>
-        <li>Act as Product Owner of the BBI Transportation TMS application, collaborating with key stakeholders to define requirements and lead the development and implementation of new features.</li>
-        <li>As 1 of 4 developers, designed and implemented a full-stack TMS application for BBI Transportation, enabling streamlined logistics and contributing to $4M+ in annual revenue.</li>
-        <li>Implemented and integrated a .NET API enabling seamless QuickBooks integration, while developing a CI/CD pipeline to automate build, test, deployment, and rollback processes.</li>
-        <li>Pioneered frontend testing integration into existing application pipelines with Vitest and Playwright and created documentation shared across development teams.</li>
-        <li>Developed external customer-facing portals providing customers and carriers with real-time insights into freight status and deliveries.</li>
-        <li>Developed a real-time company stats dashboard using React, displayed across the office to provide employees with key performance metrics.</li>
-        <li>Mentor and provide direct guidance to interns and junior developers, fostering skill development and professional growth.</li>
-      </ul>
+
+      <div class="role">
+        <div class="role-header">
+          <h4>Senior Software Engineer</h4>
+          <span class="date">Apr 2026 – Present</span>
+        </div>
+        <ul>
+          <li>Architected the migration of BBI's Transportation Management System (TMS) from a single-tenant application to a multi-tenant SaaS platform, so provisioning a tenant is a config file and a few pipeline runs, not an engineering project. One Terraform module gives each tenant an isolated Azure stack, and users sign in through their own company's Entra ID.</li>
+          <li>Co-designed a multi-tenant integration service that authenticates and translates partner webhooks before they reach the TMS, 3M+ requests a month; built 11 of its 15 integrations across freight marketplaces, tracking networks, accounting, payments, and phone systems.</li>
+          <li>Solely designed and built the EDI platform (X12 via Orderful) that processes 400K+ transactions a month for 20+ trading partners, including Fortune 500 shippers, and auto-builds 1,800+ loads a month from inbound tenders. Partners plug into a stable core pipeline as mappers; three teammates have since onboarded new customers that way.</li>
+          <li>Established the delivery model behind 70+ production deploys a month: Terraform for all infrastructure, trunk-based development with per-PR preview deployments, one immutable image per merge promoted to production, and pipeline-applied migrations. Added distributed tracing across the TMS, integration, and EDI services, so a failed partner transaction traces from webhook to database in one place.</li>
+          <li>Designed and built automated track and trace from an operations-written process spec, monitoring 3,000+ in-transit loads a month. When a truck's electronic logging device (ELD) goes dark, the system texts the driver for a location, keeps customer tracking feeds current, and escalates to operations only when automation can't recover. It tells one dark truck from a provider-wide outage and holds driver texts during the latter.</li>
+          <li>Set the team's architecture, testing, and API conventions, and packaged its runbooks (EDI onboarding, cross-service debugging, triage, release notes) as shared Claude Code skills, alongside AI code review in CI.</li>
+          <li>Mentor interns and junior developers, guiding coding practices and supporting their technical growth.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <h4>Software Engineer</h4>
+          <span class="date">Jan 2023 – Apr 2026</span>
+        </div>
+        <ul>
+          <li>Product Owner of the BBI Transportation TMS, defining requirements with stakeholders and leading feature work.</li>
+          <li>As 1 of 4 developers, designed and built a full-stack TMS contributing to $4M+ in annual revenue.</li>
+          <li>Built a .NET API for QuickBooks integration and a CI/CD pipeline automating build, test, deployment, and rollback.</li>
+          <li>Pioneered frontend testing with Vitest and Playwright and wrote the documentation now shared across teams.</li>
+          <li>Developed customer- and carrier-facing portals with real-time freight status, and a live company stats dashboard in React.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="entry">
@@ -50,10 +86,7 @@ import Base from "../layouts/Base.astro";
         </div>
         <span class="date">Apr 2020 – Sep 2022</span>
       </div>
-      <ul>
-        <li>Swiftly learned to repair and maintain bicycles starting without experience, using problem-solving, collaboration, and technical documentation. Promoted to full-time mechanic in less than 12 months.</li>
-        <li>Communicated effectively with customers to address issues and created repair plans, invoices, and scheduling with Lightspeed software.</li>
-      </ul>
+      <p class="desc">Learned bicycle repair from no experience and was promoted to full-time mechanic in under 12 months.</p>
     </div>
 
     <div class="entry">
@@ -64,10 +97,7 @@ import Base from "../layouts/Base.astro";
         </div>
         <span class="date">Jul 2018 – Aug 2020</span>
       </div>
-      <ul>
-        <li>Provided a distinguished atmosphere of hospitality to every guest at the highest-grossing cafe in the business.</li>
-        <li>Applied communication skills effectively with a team of 12+ to ensure a consistent, memorable experience for guests.</li>
-      </ul>
+      <p class="desc">Delivered hospitality at the highest-grossing cafe in the business, coordinating with a team of 12+.</p>
     </div>
 
     <div class="entry">
@@ -78,10 +108,7 @@ import Base from "../layouts/Base.astro";
         </div>
         <span class="date">Apr 2017 – Jul 2018</span>
       </div>
-      <ul>
-        <li>Roasted specialty grade coffees of the highest quality, using roasting software Cropster combined with sense-based analog methods.</li>
-        <li>Transitioned rapidly from barista to lead coffee roaster within 12 months.</li>
-      </ul>
+      <p class="desc">Roasted specialty-grade coffee with Cropster and sense-based methods; promoted from barista within 12 months.</p>
     </div>
   </section>
 
@@ -96,18 +123,7 @@ import Base from "../layouts/Base.astro";
         </div>
         <span class="date">Sep 2022 – Dec 2022</span>
       </div>
-      <p class="edu-desc">14-week full-stack coding bootcamp — 800+ hours of development education and application using Java.</p>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <div>
-          <h3>Columbus State Community College</h3>
-          <span class="org">Columbus, OH</span>
-        </div>
-        <span class="date">Aug 2018 – May 2018</span>
-      </div>
-      <p class="edu-desc">Earned credits toward a degree in Social Work and Human Services.</p>
+      <p class="desc">14-week full-stack coding bootcamp: 800+ hours building dynamic web-based software systems in Java.</p>
     </div>
   </section>
 </Base>
@@ -143,6 +159,11 @@ import Base from "../layouts/Base.astro";
     color: var(--color-accent);
   }
 
+  .summary {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
   section {
     margin-bottom: 2rem;
   }
@@ -158,8 +179,31 @@ import Base from "../layouts/Base.astro";
   }
 
   .skills {
-    color: var(--color-text-muted);
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1.25rem;
+    font-size: 0.95rem;
     line-height: 1.6;
+  }
+
+  .skills dt {
+    font-weight: 600;
+  }
+
+  .skills dd {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 600px) {
+    .skills {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .skills dd {
+      margin-bottom: 0.6rem;
+    }
   }
 
   .entry {
@@ -176,6 +220,23 @@ import Base from "../layouts/Base.astro";
 
   .entry-header h3 {
     font-size: 1.05rem;
+  }
+
+  .role {
+    margin-top: 0.75rem;
+  }
+
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+    gap: 1rem;
+  }
+
+  .role-header h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
   }
 
   .org {
@@ -201,7 +262,7 @@ import Base from "../layouts/Base.astro";
     color: var(--color-text-muted);
   }
 
-  .edu-desc {
+  .desc {
     color: var(--color-text-muted);
     font-size: 0.95rem;
     line-height: 1.6;
